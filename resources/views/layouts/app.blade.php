@@ -10,11 +10,15 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased">
+<body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -49,6 +53,11 @@
                                 </li>
                             @endif
                         @else
+
+                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                            <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
